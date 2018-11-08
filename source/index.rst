@@ -12,6 +12,7 @@ Welcome to Koha 18.05 Training's documentation!
 
   cosmetics
   catalogbrowse
+  patrons
 
 Indices and tables
 ==================
