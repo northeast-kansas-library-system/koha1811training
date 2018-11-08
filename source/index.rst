@@ -11,6 +11,7 @@ Welcome to Koha 18.05 Training's documentation!
    :caption: Contents:
 
   cosmetics
+  catalogbrowse
 
 Indices and tables
 ==================
