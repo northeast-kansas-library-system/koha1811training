@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Cosmetic and minor changes &mdash; Koha 18.05 Training  documentation</title>
+  <title>Cosmetic changes &mdash; Koha 18.05 Training  documentation</title>
   
 
   
@@ -79,12 +79,16 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Cosmetic and minor changes</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cosmetic changes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#all-pages-header">All pages - header</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#new-look-to-circulation">New look to circulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reports-home-page">Reports home page</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reports-table">Reports table</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#z39-50-results">Z39.50 results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#miscellaneous-changes">Miscellaneous changes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#automatic-suggestion-purging-13-months">Automatic suggestion purging - 13 months</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="catalogbrowse.html">Browse search records</a></li>
@@ -134,7 +138,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Cosmetic and minor changes</li>
+      <li>Cosmetic changes</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -153,8 +157,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="cosmetic-and-minor-changes">
-<h1>Cosmetic and minor changes<a class="headerlink" href="#cosmetic-and-minor-changes" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="cosmetic-changes">
+<h1>Cosmetic changes<a class="headerlink" href="#cosmetic-changes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="all-pages-header">
 <h2>All pages - header<a class="headerlink" href="#all-pages-header" title="Permalink to this headline">¶</a></h2>
 <p>Dropdowns on left side of header open on hover instead of click</p>
@@ -179,6 +183,15 @@
 <h2>Z39.50 results<a class="headerlink" href="#z39-50-results" title="Permalink to this headline">¶</a></h2>
 <p>When you click on a Z39.50 result, the row is highlighted in a stronger color.  The “Card,” “Marc,” and “Import” links have been converted into a drop-down button (I don’t like this and am looking at code to open the drop-down on hover instead of click).</p>
 <img alt="_images/050.png" src="_images/050.png" />
+</div>
+</div>
+<div class="section" id="miscellaneous-changes">
+<h1>Miscellaneous changes<a class="headerlink" href="#miscellaneous-changes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="automatic-suggestion-purging-13-months">
+<h2>Automatic suggestion purging - 13 months<a class="headerlink" href="#automatic-suggestion-purging-13-months" title="Permalink to this headline">¶</a></h2>
+<p>Koha now has the ability to automatically delete patron suggestions after a certain length of time.  We currently have 884 suggestions in the system and several hundred of them are more than 13 months old.  Some date back to 2012.</p>
+<p>We will turn on this new system preference and remove any suggestions that have been outstanding for more than 13 months.</p>
+<img alt="_images/260.png" src="_images/260.png" />
 </div>
 </div>
 
