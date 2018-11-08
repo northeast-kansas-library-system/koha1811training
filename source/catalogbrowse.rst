@@ -30,3 +30,7 @@ Clicking on the Next button will take you through all of the records you selecte
 After you've clicked on multiple checkboxes from multiple pages and then click "Add to cart" or "Add to list," all of the items you've selected from all pages will be added to the list or the cart.
 
 .. image:: images/120.png
+
+This feature does not work with the "Place hold" button.
+
+.. image:: images/130.png
