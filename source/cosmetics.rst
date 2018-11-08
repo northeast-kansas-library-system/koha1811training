@@ -53,4 +53,4 @@ Koha now has the ability to automatically delete patron suggestions after a cert
 
 We will turn on this new system preference and remove any suggestions that have been outstanding for more than 13 months.
 
-.. image:: images/270.png
+.. image:: images/260.png
