@@ -10,11 +10,10 @@ Welcome to Koha 18.05 Training's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+  cosmetics
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
