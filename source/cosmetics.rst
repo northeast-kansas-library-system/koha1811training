@@ -41,6 +41,15 @@ When you click on a Z39.50 result, the row is highlighted in a stronger color.  
 
 .. image:: images/050.png
 
+Edit items display
+-----------------
+
+When you add or edit an item, the labels on the left hand column will be closer the fields on the left hand column
+
+(Photo needed)
+
+.. (Photo needed here) .. image:: images/055.png
+
 
 Miscellaneous changes
 =====================
