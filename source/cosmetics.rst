@@ -46,9 +46,7 @@ Edit items display
 
 When you add or edit an item, the labels on the left hand column will be closer the fields on the left hand column
 
-(Photo needed)
-
-.. (Photo needed here) .. image:: images/055.png
+.. image:: images/270.jpg
 
 
 Miscellaneous changes
