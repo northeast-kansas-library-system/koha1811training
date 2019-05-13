@@ -11,7 +11,10 @@ Koha 18.11 Trainng Agenda
     Quick demo.
     #. Additional columns in Z39.50 results
     Do a cataloging search for DAY OF THE JACKAL as example
-  #.
+  #. Add item reversion
+  Show changes in alignment in add item table.
+  #. Cataloging add record problem.
+  More or less the same as the "Add item" problem
 
 
 #. Circulation
@@ -52,17 +55,28 @@ Koha 18.11 Trainng Agenda
 
 #. OPAC
 
-  #. Browse the shelf
+  #. Browse the shelf and Browse results
   Code has been modified
-  #. Hooks for patron branchcode and userid in pages when a user is logged in
-  This is a behind the scenes thing, but it can make parts of the OPAC customizable
-  
+  #. Expanded data for branchcode and userid in pages when a user is logged in
+  This is a behind the scenes thing, but it can make parts of the OPAC customizable on a branch-by-branch basis
 
-#. Searching
 
-  #. Split "Advanced search" button
+#. Searching, results, and details
+
+  #. Split "Advanced search" button in Staff
   Appears on all pages.
-
+  #. Facets for CCODE - Staff and OPAC
+  Allows for more granular searching - Do a search for "Horses"
+  #. Cart sorting and printing
+  If you sort items in the cart, you can print them in the order you sort them in.  (stealth upgrade)
+  #. Holdings count
+  Tab will show a holdings count.  Production 0003008201343 - test 0003012081166; test 0003008201777.
+  #. Date accessioned
+  Date accessioned is visible on details page - and sortable
+  #. Checkout history toolbar
+  Column visibility tools - export to csv/copy/print
+  #. 526 now indexed
+  Will allow for better accelerated reader searches - requires reindex
 
 #. Patrons
 
@@ -81,11 +95,28 @@ Koha 18.11 Trainng Agenda
   #. Codemirror
   Line numbers in report creation tool.
 
-#. Tools
+
+#. Tools/Administration
+
+  #. Circulation/fines/fees rules
+    #. Notes on circulation rules
+    This adds the ability to add a note to the circulation rules so that I'll be better able to track changes to circulation rules.
 
   #. Inventory
     #. Items scanned out of order
     #. Allow skipping items with waiting holds
+
+  #. Label creator and Card creator
+    #. Able to add descriptions
+    Production and on Test - card batch 13998 in production - batch called "Batch of Movies" in test.  Card batch 8289 in production and test - Card batch 14002 in production vs 13334 in test.
+    #. Pop-up when searching for patron in Card creator
+    Demo on the Frosty list
+    #. Flexibility in call number splitting rules
+    This one is impossible to demonstrate today - it's going to require a ton of set up, but, basically, the current process with the label creator is that you can have it split the call numbers where the spaces occur - so that REF 823.43 SHA has "REF" "823.43" and "SHA" all on separate lines.  This new feature would allow you to customize where the splits occur.  It will, however require changing the frameworks so the 952$2 is visible and then changing the selection for the 952$2 on the items you want to create new labels for.
+
+  #. Lists
+    #. Sort list by date added
+    James Bond films list Production and Test
 
   #. Notices
     #. Table is searchable
