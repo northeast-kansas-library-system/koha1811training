@@ -48,13 +48,25 @@ Koha 18.11 Trainng Agenda
 
 #. Holds/Requests
 
-  #. Split holds queue
-  Demonstrate with 0003012081166
+  #. BUG! - cannot place item level Requests
+  This is a bug and should be fixed soon.  Our tentative date for the upgrade is June 15 and I will keep an eye on this bug and ask that we not be upgraded until it is fixed.  I'm pretty confident, though, that it should be fixed by June 15 (it may actually be fixed by May 15).
   #. Collection code added to holds table
   Search for RED SPARROW
+  #. Split holds queue
+  Demonstrate with 0003012081166
+  #. Long standing bug should be fixed (mostly)
+  Meg 0003008201823 and Bohemian rhapsody 0003008201838 -
+
 
 #. OPAC
 
+  #. Many CSS elements have changed - so if something looks weird or doesn't look right, be sure to let us know.  Dan and I should be able to change anything that doesn't work correctly caused by changes to the CSS.
+  #. Cart opens with one click
+  Demo on production and test.
+  #. Login modal has changed
+  Demo on production and test.
+  #. Logging in during search keeps you in search.
+  Search JACKAL and log in as FROSTX022 (12345!) in production and test.
   #. Browse the shelf and Browse results
   Code has been modified
   #. Expanded data for branchcode and userid in pages when a user is logged in
