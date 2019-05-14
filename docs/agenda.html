@@ -1,0 +1,591 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Koha 18.11 Trainng Agenda &mdash; Koha 18.11 Training  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Koha 18.11 Training
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Koha 18.11 Trainng Agenda</a><ul>
+<li><a class="reference internal" href="#koha-homepage"><strong>Koha homepage</strong></a></li>
+<li><a class="reference internal" href="#cataloging"><strong>Cataloging</strong></a><ul>
+<li><a class="reference internal" href="#z39-50"><em>Z39.50</em></a></li>
+<li><a class="reference internal" href="#add-item-reversion"><em>Add item reversion</em></a></li>
+<li><a class="reference internal" href="#cataloging-add-record-problem"><em>Cataloging add record problem</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#circulation"><strong>Circulation</strong></a><ul>
+<li><a class="reference internal" href="#collection-code-in-checkout-table"><em>Collection code in checkout table</em></a></li>
+<li><a class="reference internal" href="#circulation-history-click-barcode-goes-to-item-record"><em>Circulation history - click barcode goes to item record</em></a></li>
+<li><a class="reference internal" href="#patron-information-in-left-column-is-now-hidden"><em>Patron information in left column is now hidden</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fines-changes"><strong>Fines changes</strong></a><ul>
+<li><a class="reference internal" href="#item-lost-twice-by-the-same-patron-isn-t-billed-the-second-time"><em>Item “Lost” twice by the same patron isn’t billed the second time</em></a></li>
+<li><a class="reference internal" href="#paying-fines-on-accounts-with-credits"><em>Paying fines on accounts with credits</em></a></li>
+<li><a class="reference internal" href="#item-home-branch-shows-in-fee-table"><em>Item home branch shows in fee table</em></a></li>
+<li><a class="reference internal" href="#writeoff-selected"><em>Writeoff selected</em></a></li>
+<li><a class="reference internal" href="#void-credit"><em>Void credit</em></a></li>
+<li><a class="reference internal" href="#email-receipts-for-payments"><em>Email receipts for payments</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#holds-requests"><strong>Holds/Requests</strong></a><ul>
+<li><a class="reference internal" href="#bug-cannot-place-item-level-requests"><em>BUG! - cannot place item level Requests</em></a></li>
+<li><a class="reference internal" href="#collection-code-added-to-holds-table"><em>Collection code added to holds table</em></a></li>
+<li><a class="reference internal" href="#split-holds-queue"><em>Split holds queue</em></a></li>
+<li><a class="reference internal" href="#long-standing-bug-should-be-fixed-mostly"><em>Long standing bug should be fixed (mostly)</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#opac"><strong>OPAC</strong></a><ul>
+<li><a class="reference internal" href="#many-css-elements-have-changed-so-if-something-looks-weird-or-doesn-t-look-right-be-sure-to-let-us-know-dan-and-i-should-be-able-to-change-anything-that-doesn-t-work-correctly-caused-by-changes-to-the-css"><em>Many CSS elements have changed - so if something looks weird or doesn’t look right, be sure to let us know.  Dan and I should be able to change anything that doesn’t work correctly caused by changes to the CSS.</em></a></li>
+<li><a class="reference internal" href="#cart-opens-with-one-click"><em>Cart opens with one click</em></a></li>
+<li><a class="reference internal" href="#login-modal-has-changed"><em>Login modal has changed</em></a></li>
+<li><a class="reference internal" href="#logging-in-during-search-keeps-you-in-search"><em>Logging in during search keeps you in search</em></a></li>
+<li><a class="reference internal" href="#browse-the-shelf-and-browse-results"><em>Browse the shelf and Browse results</em></a></li>
+<li><a class="reference internal" href="#expanded-data-for-branchcode-and-userid-in-pages-when-a-user-is-logged-in"><em>Expanded data for branchcode and userid in pages when a user is logged in</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#searching-results-and-details"><strong>Searching, results, and details</strong></a><ul>
+<li><a class="reference internal" href="#split-advanced-search-button-in-staff"><em>Split “Advanced search” button in Staff</em></a></li>
+<li><a class="reference internal" href="#cart-sorting-and-printing"><em>Cart sorting and printing</em></a></li>
+<li><a class="reference internal" href="#holdings-count"><em>Holdings count</em></a></li>
+<li><a class="reference internal" href="#date-accessioned"><em>Date accessioned</em></a></li>
+<li><a class="reference internal" href="#checkout-history-toolbar"><em>Checkout history toolbar</em></a></li>
+<li><a class="reference internal" href="#now-indexed"><em>526 now indexed</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#patrons"><strong>Patrons</strong></a><ul>
+<li><a class="reference internal" href="#guarantees-sorted-alphabetically"><em>Guarantees sorted alphabetically</em></a></li>
+<li><a class="reference internal" href="#renewal-date-on-details-page"><em>Renewal date on details page</em></a></li>
+<li><a class="reference internal" href="#updated-date-in-left-column-on-all-patrons-where-the-information-is-displayed"><em>Updated date in left column on all patrons where the information is displayed</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reports"><strong>Reports</strong></a><ul>
+<li><a class="reference internal" href="#create-charts-in-reports"><em>Create charts in Reports</em></a></li>
+<li><a class="reference internal" href="#codemirror"><em>Codemirror</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tools-administration"><strong>Tools/Administration</strong></a><ul>
+<li><a class="reference internal" href="#circulation-fines-fees-rules"><strong>Circulation/fines/fees rules</strong></a></li>
+<li><a class="reference internal" href="#inventory"><strong>Inventory</strong></a></li>
+<li><a class="reference internal" href="#label-creator-and-card-creator"><strong>Label creator and Card creator</strong></a></li>
+<li><a class="reference internal" href="#lists"><strong>Lists</strong></a></li>
+<li><a class="reference internal" href="#notices"><strong>Notices</strong></a></li>
+<li><a class="reference internal" href="#patron-lists"><strong>Patron lists</strong></a></li>
+<li><a class="reference internal" href="#batch-item-modification"><strong>Batch item modification</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Koha 18.11 Training</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Koha 18.11 Trainng Agenda</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/agenda.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="koha-18-11-trainng-agenda">
+<h1>Koha 18.11 Trainng Agenda<a class="headerlink" href="#koha-18-11-trainng-agenda" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="koha-homepage">
+<h2><strong>Koha homepage</strong><a class="headerlink" href="#koha-homepage" title="Permalink to this headline">¶</a></h2>
+<p><em>Patron notes on staff dashboard</em></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="cataloging">
+<h2><strong>Cataloging</strong><a class="headerlink" href="#cataloging" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="z39-50">
+<h3><em>Z39.50</em><a class="headerlink" href="#z39-50" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Focus on ISBN field</li>
+</ul>
+<blockquote>
+<div>Quick demo.</div></blockquote>
+<ul class="simple">
+<li>Additional columns in Z39.50 results</li>
+</ul>
+<blockquote>
+<div>Do a cataloging search for DAY OF THE JACKAL as example</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="add-item-reversion">
+<h3><em>Add item reversion</em><a class="headerlink" href="#add-item-reversion" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Show changes in alignment in add item table.</div></blockquote>
+</div>
+<div class="section" id="cataloging-add-record-problem">
+<h3><em>Cataloging add record problem</em><a class="headerlink" href="#cataloging-add-record-problem" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>More or less the same as the “Add item” problem</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="circulation">
+<h2><strong>Circulation</strong><a class="headerlink" href="#circulation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="collection-code-in-checkout-table">
+<h3><em>Collection code in checkout table</em><a class="headerlink" href="#collection-code-in-checkout-table" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Go to FROSTX011</div></blockquote>
+</div>
+<div class="section" id="circulation-history-click-barcode-goes-to-item-record">
+<h3><em>Circulation history - click barcode goes to item record</em><a class="headerlink" href="#circulation-history-click-barcode-goes-to-item-record" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Go to FROSTX011</div></blockquote>
+</div>
+<div class="section" id="patron-information-in-left-column-is-now-hidden">
+<h3><em>Patron information in left column is now hidden</em><a class="headerlink" href="#patron-information-in-left-column-is-now-hidden" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Go to FROSTX011</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="fines-changes">
+<h2><strong>Fines changes</strong><a class="headerlink" href="#fines-changes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="item-lost-twice-by-the-same-patron-isn-t-billed-the-second-time">
+<h3><em>Item “Lost” twice by the same patron isn’t billed the second time</em><a class="headerlink" href="#item-lost-twice-by-the-same-patron-isn-t-billed-the-second-time" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt>I can’t really show you this situation, but this is an outline of the circumstances:</dt>
+<dd><ol class="first last arabic simple">
+<li>Patron checks out an item and returns it more than 45 days overdue and is billed for the item</li>
+<li>Patron returns the item and the cost of the item is refunded</li>
+<li>Patron checks out the item again and keeps it more than 45 days overdue again</li>
+<li>Up until now, Koha has not been able to bill the patron for the second time the item has been declared “Lost”</li>
+</ol>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="paying-fines-on-accounts-with-credits">
+<h3><em>Paying fines on accounts with credits</em><a class="headerlink" href="#paying-fines-on-accounts-with-credits" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Also one I can’t show you.  If a patron had a fee and a credit, a bug would sometimes cause additional payments to fail.</div></blockquote>
+</div>
+<div class="section" id="item-home-branch-shows-in-fee-table">
+<h3><em>Item home branch shows in fee table</em><a class="headerlink" href="#item-home-branch-shows-in-fee-table" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>This one I can show you.  Go to FROSTX011.</div></blockquote>
+</div>
+<div class="section" id="writeoff-selected">
+<h3><em>Writeoff selected</em><a class="headerlink" href="#writeoff-selected" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Also on FROSTX011 - demonstrate how to write off a specific fee (writeoff RED SPARROW and READY PLAYER ONE).</div></blockquote>
+</div>
+<div class="section" id="void-credit">
+<h3><em>Void credit</em><a class="headerlink" href="#void-credit" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Demonstrate on FROSTX011.</div></blockquote>
+</div>
+<div class="section" id="email-receipts-for-payments">
+<h3><em>Email receipts for payments</em><a class="headerlink" href="#email-receipts-for-payments" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>When a patron pays a fee or a fee is written off, AND the patron has an e-mail address, the patron will receive an e-mail receipt for the payment/writeoff.</p>
+<ul class="simple">
+<li>This is a global system setting - currently the messages cannot be configured on a library-by-library basis.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="holds-requests">
+<h2><strong>Holds/Requests</strong><a class="headerlink" href="#holds-requests" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bug-cannot-place-item-level-requests">
+<h3><em>BUG! - cannot place item level Requests</em><a class="headerlink" href="#bug-cannot-place-item-level-requests" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>This is a bug and should be fixed soon.  Our tentative date for the upgrade is June 15 and I will keep an eye on this bug and ask that we not be upgraded until it is fixed.  I’m pretty confident, though, that it should be fixed by June 15 (it may actually be fixed by May 15).</div></blockquote>
+</div>
+<div class="section" id="collection-code-added-to-holds-table">
+<h3><em>Collection code added to holds table</em><a class="headerlink" href="#collection-code-added-to-holds-table" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Search for RED SPARROW</div></blockquote>
+</div>
+<div class="section" id="split-holds-queue">
+<h3><em>Split holds queue</em><a class="headerlink" href="#split-holds-queue" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Demonstrate with 0003012081166</div></blockquote>
+</div>
+<div class="section" id="long-standing-bug-should-be-fixed-mostly">
+<h3><em>Long standing bug should be fixed (mostly)</em><a class="headerlink" href="#long-standing-bug-should-be-fixed-mostly" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>The Meg 0003008201823 and Bohemian rhapsody 0003008201838 -</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="opac">
+<h2><strong>OPAC</strong><a class="headerlink" href="#opac" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="many-css-elements-have-changed-so-if-something-looks-weird-or-doesn-t-look-right-be-sure-to-let-us-know-dan-and-i-should-be-able-to-change-anything-that-doesn-t-work-correctly-caused-by-changes-to-the-css">
+<h3><em>Many CSS elements have changed - so if something looks weird or doesn’t look right, be sure to let us know.  Dan and I should be able to change anything that doesn’t work correctly caused by changes to the CSS.</em><a class="headerlink" href="#many-css-elements-have-changed-so-if-something-looks-weird-or-doesn-t-look-right-be-sure-to-let-us-know-dan-and-i-should-be-able-to-change-anything-that-doesn-t-work-correctly-caused-by-changes-to-the-css" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cart-opens-with-one-click">
+<h3><em>Cart opens with one click</em><a class="headerlink" href="#cart-opens-with-one-click" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Demo on production and test.</div></blockquote>
+</div>
+<div class="section" id="login-modal-has-changed">
+<h3><em>Login modal has changed</em><a class="headerlink" href="#login-modal-has-changed" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Demo on production and test.</div></blockquote>
+</div>
+<div class="section" id="logging-in-during-search-keeps-you-in-search">
+<h3><em>Logging in during search keeps you in search</em><a class="headerlink" href="#logging-in-during-search-keeps-you-in-search" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Search JACKAL and log in as FROSTX022 (12345!) in production and test.</div></blockquote>
+</div>
+<div class="section" id="browse-the-shelf-and-browse-results">
+<h3><em>Browse the shelf and Browse results</em><a class="headerlink" href="#browse-the-shelf-and-browse-results" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Code has been modified</div></blockquote>
+</div>
+<div class="section" id="expanded-data-for-branchcode-and-userid-in-pages-when-a-user-is-logged-in">
+<h3><em>Expanded data for branchcode and userid in pages when a user is logged in</em><a class="headerlink" href="#expanded-data-for-branchcode-and-userid-in-pages-when-a-user-is-logged-in" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>This is a behind the scenes thing, but it can make parts of the OPAC customizable on a branch-by-branch basis</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="searching-results-and-details">
+<h2><strong>Searching, results, and details</strong><a class="headerlink" href="#searching-results-and-details" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="split-advanced-search-button-in-staff">
+<h3><em>Split “Advanced search” button in Staff</em><a class="headerlink" href="#split-advanced-search-button-in-staff" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Appears on all pages.</div></blockquote>
+<dl class="docutils">
+<dt><a href="#id1"><span class="problematic" id="id2">*</span></a>Facets for CCODE - Staff and OPAC</dt>
+<dd>Allows for more granular searching - Do a search for “Horses”</dd>
+</dl>
+</div>
+<div class="section" id="cart-sorting-and-printing">
+<h3><em>Cart sorting and printing</em><a class="headerlink" href="#cart-sorting-and-printing" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>If you sort items in the cart, you can print them in the order you sort them in.  (stealth upgrade)</div></blockquote>
+</div>
+<div class="section" id="holdings-count">
+<h3><em>Holdings count</em><a class="headerlink" href="#holdings-count" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Tab will show a holdings count.  Production 0003008201343 - test 0003012081166; test 0003008201777.</div></blockquote>
+</div>
+<div class="section" id="date-accessioned">
+<h3><em>Date accessioned</em><a class="headerlink" href="#date-accessioned" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Date accessioned is visible on details page - and sortable</div></blockquote>
+</div>
+<div class="section" id="checkout-history-toolbar">
+<h3><em>Checkout history toolbar</em><a class="headerlink" href="#checkout-history-toolbar" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Column visibility tools - export to csv/copy/print</div></blockquote>
+</div>
+<div class="section" id="now-indexed">
+<h3><em>526 now indexed</em><a class="headerlink" href="#now-indexed" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Will allow for better accelerated reader searches - requires reindex</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="patrons">
+<h2><strong>Patrons</strong><a class="headerlink" href="#patrons" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="guarantees-sorted-alphabetically">
+<h3><em>Guarantees sorted alphabetically</em><a class="headerlink" href="#guarantees-sorted-alphabetically" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>This was a stealth upgrade - we already have it, I just wanted to point it out to everyone.</div></blockquote>
+</div>
+<div class="section" id="renewal-date-on-details-page">
+<h3><em>Renewal date on details page</em><a class="headerlink" href="#renewal-date-on-details-page" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Go to FROSTX011.  Also a stealth upgrade.</div></blockquote>
+</div>
+<div class="section" id="updated-date-in-left-column-on-all-patrons-where-the-information-is-displayed">
+<h3><em>Updated date in left column on all patrons where the information is displayed</em><a class="headerlink" href="#updated-date-in-left-column-on-all-patrons-where-the-information-is-displayed" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Go to FROSTX011.</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="reports">
+<h2><strong>Reports</strong><a class="headerlink" href="#reports" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-charts-in-reports">
+<h3><em>Create charts in Reports</em><a class="headerlink" href="#create-charts-in-reports" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Run report 3171 in test to demonstrate.</div></blockquote>
+</div>
+<div class="section" id="codemirror">
+<h3><em>Codemirror</em><a class="headerlink" href="#codemirror" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Line numbers in report creation tool.</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="tools-administration">
+<h2><strong>Tools/Administration</strong><a class="headerlink" href="#tools-administration" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<div class="section" id="circulation-fines-fees-rules">
+<h3><strong>Circulation/fines/fees rules</strong><a class="headerlink" href="#circulation-fines-fees-rules" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Notes on circulation rules</li>
+</ul>
+<blockquote>
+<div>This adds the ability to add a note to the circulation rules so that I’ll be better able to track changes to circulation rules.</div></blockquote>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="inventory">
+<h3><strong>Inventory</strong><a class="headerlink" href="#inventory" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Items scanned out of order</li>
+<li>Allow skipping items with waiting holds</li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="label-creator-and-card-creator">
+<h3><strong>Label creator and Card creator</strong><a class="headerlink" href="#label-creator-and-card-creator" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Able to add descriptions</li>
+</ul>
+<blockquote>
+<div>Production and on Test - card batch 13998 in production - batch called “Batch of Movies” in test.  Card batch 8289 in production and test - Card batch 14002 in production vs 13334 in test.</div></blockquote>
+<ul class="simple">
+<li>Pop-up when searching for patron in Card creator</li>
+</ul>
+<blockquote>
+<div>Demo on the Frosty list</div></blockquote>
+<ul class="simple">
+<li>Flexibility in call number splitting rules</li>
+</ul>
+<blockquote>
+<div>This one is impossible to demonstrate today - it’s going to require a ton of set up, but, basically, the current process with the label creator is that you can have it split the call numbers where the spaces occur - so that REF 823.43 SHA has “REF” “823.43” and “SHA” all on separate lines.  This new feature would allow you to customize where the splits occur.  It will, however require changing the frameworks so the 952$2 is visible and then changing the selection for the 952$2 on the items you want to create new labels for.</div></blockquote>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="lists">
+<h3><strong>Lists</strong><a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt><a href="#id3"><span class="problematic" id="id4">*</span></a>Sort list by date added</dt>
+<dd>James Bond films list Production and Test</dd>
+</dl>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="notices">
+<h3><strong>Notices</strong><a class="headerlink" href="#notices" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Table is searchable</li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="patron-lists">
+<h3><strong>Patron lists</strong><a class="headerlink" href="#patron-lists" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Share patron lists between staff</li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="batch-item-modification">
+<h3><strong>Batch item modification</strong><a class="headerlink" href="#batch-item-modification" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Holds column</li>
+</ul>
+<blockquote>
+<div>Shows how many holds are on an item.</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, NEKLS staff
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
