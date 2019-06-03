@@ -10,6 +10,8 @@ Welcome to Koha 18.11 Training's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   agenda
+
 
 
 Indices and tables
