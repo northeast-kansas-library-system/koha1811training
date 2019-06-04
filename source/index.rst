@@ -11,6 +11,9 @@ Welcome to Koha 18.11 Training's documentation!
    :caption: Contents:
 
    agenda
+   part_1
+   part_2
+   part_3
 
 
 
