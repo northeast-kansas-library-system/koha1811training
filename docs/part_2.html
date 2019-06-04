@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Koha 18.11 Trainng Part 2 &mdash; Koha 18.11 Training  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Koha 18.11 Trainng Part 3" href="part_3.html" />
+    <link rel="prev" title="Koha 18.11 Trainng Part 1" href="part_1.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Koha 18.11 Training
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="agenda.html">Koha 18.11 Trainng</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_1.html">Koha 18.11 Trainng Part 1</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Koha 18.11 Trainng Part 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fines-changes"><strong>Fines changes</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#item-lost-twice-by-the-same-patron-isn-t-billed-the-second-time"><em>Item “Lost” twice by the same patron isn’t billed the second time</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paying-fines-on-accounts-with-credits"><em>Paying fines on accounts with credits</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#item-home-branch-shows-in-fee-table"><em>Item home branch shows in fee table</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#writeoff-selected"><em>Writeoff selected</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#void-credits-and-writoffs"><em>Void credits and writoffs</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#email-receipts-for-payments"><em>Email receipts for payments</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#holds-requests"><strong>Holds/Requests</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bug-cannot-place-item-level-requests"><em>BUG! - cannot place item level Requests</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#collection-code-added-to-holds-table"><em>Collection code added to holds table</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#split-holds-queue"><em>Split holds queue</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#opac"><strong>OPAC</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#many-css-elements-have-changed-so-if-something-looks-weird-or-doesn-t-look-right-be-sure-to-let-us-know-dan-and-i-should-be-able-to-change-anything-that-doesn-t-work-correctly-caused-by-changes-to-the-css"><em>Many CSS elements have changed - so if something looks weird or doesn’t look right, be sure to let us know.  Dan and I should be able to change anything that doesn’t work correctly caused by changes to the CSS.</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cart-opens-with-one-click"><em>Cart opens with one click</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#login-modal-has-changed"><em>Login modal has changed</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logging-in-during-search-keeps-you-in-search"><em>Logging in during search keeps you in search</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expanded-data-for-branchcode-and-userid-in-pages-when-a-user-is-logged-in"><em>Expanded data for branchcode and userid in pages when a user is logged in</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_3.html">Koha 18.11 Trainng Part 3</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Koha 18.11 Training</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Koha 18.11 Trainng Part 2</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/part_2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="koha-18-11-trainng-part-2">
+<h1>Koha 18.11 Trainng Part 2<a class="headerlink" href="#koha-18-11-trainng-part-2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="fines-changes">
+<h2><strong>Fines changes</strong><a class="headerlink" href="#fines-changes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="item-lost-twice-by-the-same-patron-isn-t-billed-the-second-time">
+<h3><em>Item “Lost” twice by the same patron isn’t billed the second time</em><a class="headerlink" href="#item-lost-twice-by-the-same-patron-isn-t-billed-the-second-time" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>This cannot be shown, but this is an outline of the circumstances:</dt>
+<dd><ol class="first last arabic simple">
+<li>Patron checks out an item and returns it more than 45 days overdue and is billed for the item</li>
+<li>Patron returns the item and the cost of the item is refunded</li>
+<li>Patron checks out the item again and keeps it more than 45 days overdue again</li>
+<li>Up until now, Koha has not been able to bill the patron for the second time the item has been declared “Lost”</li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section" id="paying-fines-on-accounts-with-credits">
+<h3><em>Paying fines on accounts with credits</em><a class="headerlink" href="#paying-fines-on-accounts-with-credits" title="Permalink to this headline">¶</a></h3>
+<p>Also can’t be shown.  If a patron had a fee and a credit, a bug would sometimes cause additional payments to fail.</p>
+</div>
+<div class="section" id="item-home-branch-shows-in-fee-table">
+<h3><em>Item home branch shows in fee table</em><a class="headerlink" href="#item-home-branch-shows-in-fee-table" title="Permalink to this headline">¶</a></h3>
+<p>The patron’s fines table will now show item home library information.</p>
+<blockquote>
+<div><img alt="_images/0120.jpg" src="_images/0120.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="writeoff-selected">
+<h3><em>Writeoff selected</em><a class="headerlink" href="#writeoff-selected" title="Permalink to this headline">¶</a></h3>
+<p>Multiple fee lines can be written off at once with the new “Write off selected” button.</p>
+<blockquote>
+<div><img alt="_images/0130.jpg" src="_images/0130.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="void-credits-and-writoffs">
+<h3><em>Void credits and writoffs</em><a class="headerlink" href="#void-credits-and-writoffs" title="Permalink to this headline">¶</a></h3>
+<p>It is now possible to void writeoffs and credits.  This should simplify some of the payment issues we’ve had as the accounts rewrite has been underway.</p>
+<blockquote>
+<div><img alt="_images/0140.jpg" src="_images/0140.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="email-receipts-for-payments">
+<h3><em>Email receipts for payments</em><a class="headerlink" href="#email-receipts-for-payments" title="Permalink to this headline">¶</a></h3>
+<p>When a patron pays a fee or a fee is written off, AND the patron has an e-mail address, the patron will receive an e-mail receipt for the payment/writeoff.</p>
+<blockquote>
+<div><img alt="_images/0150.jpg" src="_images/0150.jpg" />
+<ul class="simple">
+<li>This is a global system setting - currently the messages cannot be configured on a library-by-library basis.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="holds-requests">
+<h2><strong>Holds/Requests</strong><a class="headerlink" href="#holds-requests" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bug-cannot-place-item-level-requests">
+<h3><em>BUG! - cannot place item level Requests</em><a class="headerlink" href="#bug-cannot-place-item-level-requests" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>This is a bug and should be fixed soon.  Our tentative date for the upgrade is June 15 and I will keep an eye on this bug and ask that we not be upgraded until it is fixed.  I’m pretty confident, though, that it should be fixed by June 15 (it may actually be fixed by May 15).</div></blockquote>
+</div>
+<div class="section" id="collection-code-added-to-holds-table">
+<h3><em>Collection code added to holds table</em><a class="headerlink" href="#collection-code-added-to-holds-table" title="Permalink to this headline">¶</a></h3>
+<p>Collection codes will be added to the holds table in a separate column:</p>
+<blockquote>
+<div><p>Before:</p>
+<blockquote>
+<div><img alt="_images/0160.jpg" src="_images/0160.jpg" />
+</div></blockquote>
+<p>After:</p>
+<blockquote>
+<div><img alt="_images/0170.jpg" src="_images/0170.jpg" />
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="split-holds-queue">
+<h3><em>Split holds queue</em><a class="headerlink" href="#split-holds-queue" title="Permalink to this headline">¶</a></h3>
+<p>The layout of the holds queue is going to look radically different.  It will show the holds for each library in a separate group.</p>
+<blockquote>
+<div><p>Before:</p>
+<blockquote>
+<div><img alt="_images/0180.jpg" src="_images/0180.jpg" />
+</div></blockquote>
+<p>After:</p>
+<blockquote>
+<div><img alt="_images/0190.jpg" src="_images/0190.jpg" />
+</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="opac">
+<h2><strong>OPAC</strong><a class="headerlink" href="#opac" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="many-css-elements-have-changed-so-if-something-looks-weird-or-doesn-t-look-right-be-sure-to-let-us-know-dan-and-i-should-be-able-to-change-anything-that-doesn-t-work-correctly-caused-by-changes-to-the-css">
+<h3><em>Many CSS elements have changed - so if something looks weird or doesn’t look right, be sure to let us know.  Dan and I should be able to change anything that doesn’t work correctly caused by changes to the CSS.</em><a class="headerlink" href="#many-css-elements-have-changed-so-if-something-looks-weird-or-doesn-t-look-right-be-sure-to-let-us-know-dan-and-i-should-be-able-to-change-anything-that-doesn-t-work-correctly-caused-by-changes-to-the-css" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cart-opens-with-one-click">
+<h3><em>Cart opens with one click</em><a class="headerlink" href="#cart-opens-with-one-click" title="Permalink to this headline">¶</a></h3>
+<p>Currently you have to click twice to open the cart on the OPAC.  Only one click will be necessary after the upgrade.</p>
+<blockquote>
+<div><p>Before:</p>
+<blockquote>
+<div><img alt="_images/0200.gif" src="_images/0200.gif" />
+</div></blockquote>
+<p>After:</p>
+<blockquote>
+<div><img alt="_images/0210.gif" src="_images/0210.gif" />
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="login-modal-has-changed">
+<h3><em>Login modal has changed</em><a class="headerlink" href="#login-modal-has-changed" title="Permalink to this headline">¶</a></h3>
+<p>The Login window for patrons has changed.  This will look different to patrons.</p>
+<blockquote>
+<div><p>Before:</p>
+<blockquote>
+<div><img alt="_images/0220.jpg" src="_images/0220.jpg" />
+</div></blockquote>
+<p>After:</p>
+<blockquote>
+<div><img alt="_images/0230.jpg" src="_images/0230.jpg" />
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="logging-in-during-search-keeps-you-in-search">
+<h3><em>Logging in during search keeps you in search</em><a class="headerlink" href="#logging-in-during-search-keeps-you-in-search" title="Permalink to this headline">¶</a></h3>
+<p>Currently if a patron does a search in the OPAC before they log into their account, once they log in, they have to re-run the search.  In the new version, after logging in, the patron will be redirected to the search they were in the middle of.</p>
+<blockquote>
+<div><p>Before:</p>
+<blockquote>
+<div><img alt="_images/0240.gif" src="_images/0240.gif" />
+</div></blockquote>
+<p>After:</p>
+<blockquote>
+<div><img alt="_images/0250.gif" src="_images/0250.gif" />
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="expanded-data-for-branchcode-and-userid-in-pages-when-a-user-is-logged-in">
+<h3><em>Expanded data for branchcode and userid in pages when a user is logged in</em><a class="headerlink" href="#expanded-data-for-branchcode-and-userid-in-pages-when-a-user-is-logged-in" title="Permalink to this headline">¶</a></h3>
+<p>This is a behind the scenes thing, but it can make some parts of the OPAC customizable on a branch-by-branch basis</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="part_3.html" class="btn btn-neutral float-right" title="Koha 18.11 Trainng Part 3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="part_1.html" class="btn btn-neutral" title="Koha 18.11 Trainng Part 1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, NEKLS staff
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
