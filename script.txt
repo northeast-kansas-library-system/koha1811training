@@ -1,0 +1,185 @@
+Script - Part I
+
+Hello everyone, my name is George Williams and I'm the Next Search Catalog Coordinator for Northeast Kansas Library System and I'm going to be talking today about the changes coming to Next Search Catalog when we upgrade the catalog's software from Koha 18.05 to Koha 18.11 on the evening of June 15, 2019.  Many of these changes are minor, most of them are things people will like and there are a couple that I'm not terribly happy about.
+
+As a reminder, you can find links to the 18.11 upgrade training website on the homepage in Koha in the top News column on the left hand side of the page.  And once this video and the two other accompanying videos are finished, there will be a link to these videos on YouTube also on that news block.
+
+I'm also working on a PDF version of this site, but my PDF builder keeps getting hung up on one of the screenshots, but I hope to have that worked out soon.
+
+Directly under this news block is the block that has the Next Search Catalog contact information.  If you have any problems after the upgrade, please contact us at nexthelp@nekls.org or you can also phone.  The after hours emergency number is also there.  If you contact nexthelp@nekls.org, the e-mail you send will go to George, Robin, Dan, and Jessi.  Likewise, if you call the after hours emergency number, it will leave a voicemail on George's cell phone, Robin's cell phone, Dan's cell phone and Jessi's cell phone.  That's the best way to get in touch with us if you are having an emergency after 5:00 p.m. or on Saturday or Sunday.
+
+Our test server has already been upgraded to Koha 18.11 and if you scroll through the Koha homepage news section way down to where it says "Test server" you'll be able to find the links that go to both the Test staff client and the test OPAC.  The last upgrade to the test server was on February 10, so you should be able to log into the test server with the same username and password you were using on February 10, so if you haven't changed your password since February, you should be fine.
+
+I'm going to jump over to the training website now and what I'm going to be talking about in this first video corresponds with what you'll see on the training website under the heading "Koha 18.11 Training Part 1."
+
+So, let's start with the training:
+
+First off, I'm going to remind everyone that you will need to clear the cache on your browser after the upgrade.  There will be a message on the login page reminding everyone of this and there is a link to a new version of the "How to clear your cache" document.  The simple thing to remember is CTRL-SHIFT-DELETE.  If you do that in your browser, whether its Firefox or Chrome, you'll get a little pop-up menu that will clear your cache.
+
+Once you're logged in:
+
+Koha 18.11 Trainng Agenda
+==========================
+
+**Koha homepage**
+-----------------
+
+*Patron notes on staff dashboard*
+
+----------------------------------------
+
+**Cataloging**
+--------------
+
+*Z39.50*
+^^^^^^^^
+  -  Focus on ISBN field
+    Quick demo.
+  -  Additional columns in Z39.50 results
+    Do a cataloging search for DAY OF THE JACKAL as example
+
+*Add item reversion*
+^^^^^^^^^^^^^^^^^^^^
+  Show changes in alignment in add item table.
+
+*Cataloging add record problem*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  More or less the same as the "Add item" problem
+
+----------------------------------------
+
+**Circulation**
+---------------
+
+*Collection code in checkout table*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Go to FROSTX011
+
+*Circulation history - click barcode goes to item record*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Go to FROSTX011
+
+*Patron information in left column is now hidden*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Go to FROSTX011
+
+----------------------------------------
+
+
+
+
+
+Script - Part 2
+
+Hello everyone, my name is George Williams and I'm the Next Search Catalog Coordinator for Northeast Kansas Library System and this is part 2 of a 3 part video series outlining the changes that will be taking place in Next Search Catalog when we upgrade the catalog's software from Koha 18.05 to Koha 18.11 on the evening of June 15, 2019.  Many of these changes are minor, most of them are things people will like and there are a couple that I'm not terribly happy about.
+
+If you have not watched part 1 of this series of videos, it will explain some more of the background and show you where you can find the other training resources for this upgrade - including a reminder of how to clear your browser's cache.
+
+Last time I ended with some changes to the patron's account at check-out, so I'll pick up here with changes that are happening to the fines and fees portion of Koha:
+
+**Fines changes**
+-----------------
+
+*Item "Lost" twice by the same patron isn't billed the second time*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  I can't really show you this situation, but this is an outline of the circumstances:
+    #.  Patron checks out an item and returns it more than 45 days overdue and is billed for the item
+    #.  Patron returns the item and the cost of the item is refunded
+    #.  Patron checks out the item again and keeps it more than 45 days overdue again
+    #.  Up until now, Koha has not been able to bill the patron for the second time the item has been declared "Lost"
+
+*Paying fines on accounts with credits*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Also one I can't show you.  If a patron had a fee and a credit, a bug would sometimes cause additional payments to fail.
+
+*Item home branch shows in fee table*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  This one I can show you.  Go to FROSTX011.
+
+*Writeoff selected*
+^^^^^^^^^^^^^^^^^^^
+  Also on FROSTX011 - demonstrate how to write off a specific fee (writeoff RED SPARROW and READY PLAYER ONE).
+
+*Void credit*
+^^^^^^^^^^^^^
+  Demonstrate on FROSTX011.
+
+*Email receipts for payments*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  When a patron pays a fee or a fee is written off, AND the patron has an e-mail address, the patron will receive an e-mail receipt for the payment/writeoff.
+
+  -  This is a global system setting - currently the messages cannot be configured on a library-by-library basis.
+
+----------------------------------------
+
+**Holds/Requests**
+------------------
+
+*BUG! - cannot place item level Requests*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  This is a bug and should be fixed soon.  Our tentative date for the upgrade is June 15 and I will keep an eye on this bug and ask that we not be upgraded until it is fixed.  I'm pretty confident, though, that it should be fixed by June 15 (it may actually be fixed by May 15).
+
+*Collection code added to holds table*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     Search for RED SPARROW
+
+*Split holds queue*
+^^^^^^^^^^^^^^^^^^^
+  Demonstrate with 0003012081166
+
+*Long standing bug should be fixed (mostly)*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  The Meg 0003008201823 and Bohemian rhapsody 0003008201838 -
+
+----------------------------------------
+
+**OPAC**
+--------
+
+*Many CSS elements have changed - so if something looks weird or doesn't look right, be sure to let us know.  Dan and I should be able to change anything that doesn't work correctly caused by changes to the CSS.*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+*Cart opens with one click*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Demo on production and test.
+
+*Login modal has changed*
+^^^^^^^^^^^^^^^^^^^^^^^^^
+  Demo on production and test.
+
+*Logging in during search keeps you in search*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Search JACKAL and log in as FROSTX022 (12345!) in production and test.
+
+*Browse the shelf and Browse results*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Code has been modified
+
+*Expanded data for branchcode and userid in pages when a user is logged in*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  This is a behind the scenes thing, but it can make parts of the OPAC customizable on a branch-by-branch basis
+
+----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Script part 3

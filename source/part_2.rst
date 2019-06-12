@@ -89,11 +89,15 @@ Currently you have to click twice to open the cart on the OPAC.  Only one click 
 
   Before:
 
-    .. image:: /screenshots/0200.gif
+    .. only:: html
+
+       .. image:: /screenshots/0200.gif
 
   After:
 
-    .. image:: /screenshots/0210.gif
+    .. only:: html
+
+       .. image:: /screenshots/0210.gif
 
 
 *Login modal has changed*
