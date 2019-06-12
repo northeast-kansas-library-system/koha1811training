@@ -45,6 +45,32 @@ Koha 18.11 Trainng Agenda
 
 ----------------------------------------
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 **Fines changes**
 -----------------
 
@@ -128,6 +154,34 @@ Koha 18.11 Trainng Agenda
   This is a behind the scenes thing, but it can make parts of the OPAC customizable on a branch-by-branch basis
 
 ----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **Searching, results, and details**
 -----------------------------------
