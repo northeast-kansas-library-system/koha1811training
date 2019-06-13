@@ -119,9 +119,13 @@ Currently if a patron does a search in the OPAC before they log into their accou
 
   Before:
 
+  .. only:: html
+
     .. image:: /screenshots/0240.gif
 
   After:
+
+  .. only:: html
 
     .. image:: /screenshots/0250.gif
 
